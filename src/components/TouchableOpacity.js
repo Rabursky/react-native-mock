@@ -17,8 +17,9 @@ const TouchableOpacity = React.createClass({
   },
 
   render() {
-    return null;
+    const { children, activeOpacity, ...props } = this.props;
+    return React.cloneElement(TouchableWithoutFeedback, props, children);
   },
 });
 
-module.exports = TouchableOpacity;
+module.exports = TouchableWithoutFeedback;

@@ -15,7 +15,8 @@ const TouchableNativeFeedback = React.createClass({
     Ripple(color, borderless) {}
   },
   render() {
-    return null;
+    const { children, ...props } = this.props;
+    return React.createElement('TouchableWNativeFeedback', props, children);
   }
 });
 

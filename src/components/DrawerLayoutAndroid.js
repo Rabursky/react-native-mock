@@ -107,7 +107,8 @@ const DrawerLayoutAndroid = React.createClass({
   },
 
   render() {
-    return null;
+    const { children, ...props } = this.props;
+    return React.createElement('AndroidLayout', props, children);
   }
 
 });

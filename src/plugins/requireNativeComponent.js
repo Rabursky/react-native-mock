@@ -7,7 +7,8 @@ function requireNativeComponent(viewName, componentInterface, extraConfig) {
   return React.createClass({
     displayName: viewName,
     render() {
-      return null;
+      const { children, ...props } = this.props;
+      return React.createElement(viewName, props, children);
     },
   });
 }

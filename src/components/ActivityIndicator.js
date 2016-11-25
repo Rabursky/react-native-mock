@@ -39,7 +39,8 @@ const ActivityIndicator = React.createClass({
   },
   mixins: [NativeMethodsMixin],
   render() {
-    return null;
+    const { children, ...props } = this.props;
+    return React.createElement('ActivityIndicator', props, children);
   },
 });
 

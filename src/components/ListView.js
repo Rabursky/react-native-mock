@@ -160,7 +160,8 @@ const ListView = React.createClass({
   },
 
   render() {
-    return null;
+    const { children, ...props } = this.props;
+    return React.createElement('ListView', props, children);
   },
 });
 

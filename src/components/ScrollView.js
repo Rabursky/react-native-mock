@@ -7,6 +7,8 @@ import ViewStylePropTypes from '../propTypes/ViewStylePropTypes';
 import ScrollViewManager from '../NativeModules/ScrollViewManager';
 import styleSheetPropType from '../propTypes/StyleSheetPropType';
 
+import NativeMethodsMixin from '../mixins/NativeMethodsMixin';
+
 const { PropTypes } = React;
 
 const SCROLLVIEW = 'ScrollView';
@@ -311,7 +313,8 @@ const ScrollView = React.createClass({
   },
 
   render() {
-    return null;
+    const { children, ...props } = this.props;
+    return React.createElement('ScrollView', props, children);
   },
 });
 

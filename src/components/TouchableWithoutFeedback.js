@@ -64,7 +64,8 @@ const TouchableWithoutFeedback = React.createClass({
     hitSlop: EdgeInsetsPropType,
   },
   render() {
-    return null;
+    const { children, onPress, activeOpacity, ...props } = this.props;
+    return React.createElement('input', { onClick: onPress, type: "button", ...props }, null);
   },
 });
 
