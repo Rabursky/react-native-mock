@@ -7,7 +7,7 @@ import AnimatedImplementation from './AnimatedImplementation';
 module.exports = {
   ...AnimatedImplementation,
   createAnimatedComponent,
-  View: createAnimatedComponent(View),
-  Text: createAnimatedComponent(Text),
-  Image: createAnimatedComponent(Image),
+  View: View,
+  Text: Text,
+  Image: Image,
 };

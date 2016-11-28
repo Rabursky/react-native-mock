@@ -7,8 +7,8 @@ function createAnimatedComponent(Component) {
     render() {
       return (
         <Component
-          // {...this._propsAnimated.__getValue()}
-          // ref={refName}
+          {...this._propsAnimated.__getValue()}
+          ref={refName}
         />
       );
     }
