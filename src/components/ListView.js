@@ -4,6 +4,8 @@ import TimerMixin from 'react-timer-mixin';
 import ScrollView from './ScrollView';
 import ListViewDataSource from '../api/ListViewDataSource';
 
+import View from './View'
+
 const { PropTypes } = React;
 const SCROLLVIEW_REF = 'listviewscroll';
 
@@ -161,7 +163,12 @@ const ListView = React.createClass({
 
   render() {
     const { children, ...props } = this.props;
-    return React.createElement('ListView', props, children);
+    return (
+      <View>
+        {props.dataSource._dataBlob.map(props.renderRow)}
+      </View>
+    )
+    // return React.createElement('ListView', props, children);
   },
 });
 

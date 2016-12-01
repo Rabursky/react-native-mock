@@ -2,7 +2,9 @@ var _jsxFileName='src/components/ListView.js';var _extends=Object.assign||functi
 var _ScrollResponder=require('../mixins/ScrollResponder');var _ScrollResponder2=_interopRequireDefault(_ScrollResponder);
 var _reactTimerMixin=require('react-timer-mixin');var _reactTimerMixin2=_interopRequireDefault(_reactTimerMixin);
 var _ScrollView=require('./ScrollView');var _ScrollView2=_interopRequireDefault(_ScrollView);
-var _ListViewDataSource=require('../api/ListViewDataSource');var _ListViewDataSource2=_interopRequireDefault(_ListViewDataSource);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{'default':obj};}function _objectWithoutProperties(obj,keys){var target={};for(var i in obj){if(keys.indexOf(i)>=0)continue;if(!Object.prototype.hasOwnProperty.call(obj,i))continue;target[i]=obj[i];}return target;}var
+var _ListViewDataSource=require('../api/ListViewDataSource');var _ListViewDataSource2=_interopRequireDefault(_ListViewDataSource);
+
+var _View=require('./View');var _View2=_interopRequireDefault(_View);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{'default':obj};}function _objectWithoutProperties(obj,keys){var target={};for(var i in obj){if(keys.indexOf(i)>=0)continue;if(!Object.prototype.hasOwnProperty.call(obj,i))continue;target[i]=obj[i];}return target;}var
 
 PropTypes=_react2['default'].PropTypes;
 var SCROLLVIEW_REF='listviewscroll';
@@ -151,7 +153,7 @@ this.refs[SCROLLVIEW_REF].setNativeProps(props);
 
 getDefaultProps:function(){function getDefaultProps(){
 return{
-renderScrollComponent:function(){function renderScrollComponent(props){return _react2['default'].createElement(_ScrollView2['default'],_extends({},props,{__source:{fileName:_jsxFileName,lineNumber:154}}));}return renderScrollComponent;}()};
+renderScrollComponent:function(){function renderScrollComponent(props){return _react2['default'].createElement(_ScrollView2['default'],_extends({},props,{__source:{fileName:_jsxFileName,lineNumber:156}}));}return renderScrollComponent;}()};
 
 }return getDefaultProps;}(),
 
@@ -161,7 +163,12 @@ return this.refs[SCROLLVIEW_REF].getInnerViewNode();
 
 render:function(){function render(){var _props=
 this.props,children=_props.children,props=_objectWithoutProperties(_props,['children']);
-return _react2['default'].createElement('ListView',props,children);
+return(
+_react2['default'].createElement(_View2['default'],{__source:{fileName:_jsxFileName,lineNumber:167}},
+props.dataSource._dataBlob.map(props.renderRow)));
+
+
+// return React.createElement('ListView', props, children);
 }return render;}()});
 
 
