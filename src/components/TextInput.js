@@ -244,9 +244,9 @@ const TextInput = React.createClass({
   render() {
     const { children, onChangeText, onSubmitEditing, returnKeyType, secureTextEntry, ...props } = this.props;
     if (secureTextEntry) {
-      return React.createElement('input', { onChange: (text) => { onChangeText(text); onSubmitEditing(); }, type: "password", ...props, ...NativeMethodsMixin}, null);
+      return React.createElement('input', { onChange: (text) => { onChangeText && onChangeText(text); onSubmitEditing && onSubmitEditing(); }, type: "password", ...props, ...NativeMethodsMixin}, null);
     }
-    return React.createElement('input', { onChange: (text) => { onChangeText(text); onSubmitEditing(); }, type: "text", ...props, ...NativeMethodsMixin}, null);
+    return React.createElement('input', { onChange: (text) => { onChangeText && onChangeText(text); onSubmitEditing && onSubmitEditing(); }, type: "text", ...props, ...NativeMethodsMixin}, null);
   },
 });
 

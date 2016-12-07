@@ -168,7 +168,6 @@ const ListView = React.createClass({
         {props.dataSource._dataBlob.map(props.renderRow)}
       </View>
     )
-    // return React.createElement('ListView', props, children);
   },
 });
 

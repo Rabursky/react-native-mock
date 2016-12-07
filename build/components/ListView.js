@@ -168,7 +168,6 @@ _react2['default'].createElement(_View2['default'],{__source:{fileName:_jsxFileN
 props.dataSource._dataBlob.map(props.renderRow)));
 
 
-// return React.createElement('ListView', props, children);
 }return render;}()});
 
 

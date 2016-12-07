@@ -244,9 +244,9 @@ clear:function(){function clear(){
 render:function(){function render(){var _props=
 this.props,children=_props.children,onChangeText=_props.onChangeText,onSubmitEditing=_props.onSubmitEditing,returnKeyType=_props.returnKeyType,secureTextEntry=_props.secureTextEntry,props=_objectWithoutProperties(_props,['children','onChangeText','onSubmitEditing','returnKeyType','secureTextEntry']);
 if(secureTextEntry){
-return _react2['default'].createElement('input',_extends({onChange:function(){function onChange(text){onChangeText(text);onSubmitEditing();}return onChange;}(),type:"password"},props,_NativeMethodsMixin2['default']),null);
+return _react2['default'].createElement('input',_extends({onChange:function(){function onChange(text){onChangeText&&onChangeText(text);onSubmitEditing&&onSubmitEditing();}return onChange;}(),type:"password"},props,_NativeMethodsMixin2['default']),null);
 }
-return _react2['default'].createElement('input',_extends({onChange:function(){function onChange(text){onChangeText(text);onSubmitEditing();}return onChange;}(),type:"text"},props,_NativeMethodsMixin2['default']),null);
+return _react2['default'].createElement('input',_extends({onChange:function(){function onChange(text){onChangeText&&onChangeText(text);onSubmitEditing&&onSubmitEditing();}return onChange;}(),type:"text"},props,_NativeMethodsMixin2['default']),null);
 }return render;}()});
 
 
