@@ -7,7 +7,7 @@ const SubscribableMixin = {
 
   componentWillUnmount() {
     this._subscribableSubscriptions.forEach(
-      (subscription) => subscription.remove()
+      (subscription) => { subscription.remove && subscription.remove(); }
     );
     this._subscribableSubscriptions = null;
   },

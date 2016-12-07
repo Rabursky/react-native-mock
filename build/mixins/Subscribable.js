@@ -7,7 +7,7 @@ this._subscribableSubscriptions=[];
 
 componentWillUnmount:function(){function componentWillUnmount(){
 this._subscribableSubscriptions.forEach(
-function(subscription){return subscription.remove();});
+function(subscription){subscription.remove&&subscription.remove();});
 
 this._subscribableSubscriptions=null;
 }return componentWillUnmount;}(),
